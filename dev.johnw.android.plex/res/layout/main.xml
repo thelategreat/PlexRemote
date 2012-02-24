@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal" >
+    <Button
+        android:id="@+id/rew"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="navRew"
+        android:text="Rew" />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="navPlay"
+        android:text="Play/Pause" />
+
+    <Button
+        android:id="@+id/ff"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="navFF"
+        android:text="FF" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/linearLayout4"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical" >
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/up"
+        android:layout_width="0dp"
+        android:layout_height="50dip"
+        android:layout_weight="1"
+        android:background="@drawable/up_button"
+        android:onClick="navUp" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+    </FrameLayout>
+    
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/linearLayout2"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <Button
+        android:id="@+id/left"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="@drawable/left_button"
+        android:onClick="navLeft" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="0dip"
+        android:layout_height="50dip"
+        android:layout_weight="1"
+        android:background="@drawable/ok_button"
+        android:onClick="navOk" />
+
+    <Button
+        android:id="@+id/right"
+        android:layout_width="0dip"
+        android:layout_height="50dip"
+        android:layout_weight="1"
+        android:background="@drawable/right_button"
+        android:onClick="navRight" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/linearLayout3"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/down"
+        android:layout_width="0dp"
+        android:layout_height="50dip"
+        android:layout_weight="1"
+        android:background="@drawable/down_button"
+        android:onClick="navDown" />
+ 
+    <FrameLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+    </FrameLayout>
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/linearLayout5"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical" >
+
+</LinearLayout>
+
+         <Button
+             android:id="@+id/back"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:onClick="navBack"
+             android:text="Back" /> 
+
+         <Button
+             android:id="@+id/list"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:onClick="viewList"
+             android:text="List" />
+
+</LinearLayout>
