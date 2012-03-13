@@ -3,14 +3,21 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center_horizontal"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/back" >
 
     <TextView
         android:id="@+id/headerText"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:text="hello" /> 
+        
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="10dip"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal" >
+</LinearLayout><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
@@ -20,7 +27,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:onClick="navRew"
+        android:onClick="play"
+        android:tag="stepBack"
         android:text="Rew" />
 
     <Button
@@ -28,15 +36,26 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:onClick="navPlay"
-        android:text="Play/Pause" />
+        android:text="Play"
+        android:onClick="play"
+        android:tag="play" />
+    
+        <Button
+        android:id="@+id/stop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="play"
+        android:tag="stop"
+        android:text="Stop" />
 
     <Button
         android:id="@+id/ff"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:onClick="navFF"
+        android:onClick="play"
+        android:tag="stepForward"
         android:text="FF" />
 
 </LinearLayout>
@@ -61,14 +80,15 @@
         android:layout_weight="1" >
 
     </FrameLayout>
-
+
     <Button
         android:id="@+id/up"
         android:layout_width="0dp"
-        android:layout_height="50dip"
+        android:layout_height="75dip"
         android:layout_weight="1"
         android:background="@drawable/up_button"
-        android:onClick="navUp" />
+        android:onClick="nav"
+        android:tag="moveUp" />
 
     <FrameLayout
         android:id="@+id/frameLayout2"
@@ -84,30 +104,34 @@
     android:id="@+id/linearLayout2"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" >
-
+
     <Button
         android:id="@+id/left"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="75dp"
         android:layout_weight="1"
         android:background="@drawable/left_button"
-        android:onClick="navLeft" />
-
+        android:onClick="nav"
+        android:tag="moveLeft" />
+
     <Button
         android:id="@+id/ok"
         android:layout_width="0dip"
-        android:layout_height="50dip"
+        android:layout_height="75dip"
         android:layout_weight="1"
         android:background="@drawable/ok_button"
-        android:onClick="navOk" />
-
+        android:onClick="nav"
+        android:tag="select" />
+
     <Button
         android:id="@+id/right"
         android:layout_width="0dip"
-        android:layout_height="50dip"
+        android:layout_height="75dip"
         android:layout_weight="1"
         android:background="@drawable/right_button"
-        android:onClick="navRight" />
+        android:onClick="nav"
+        android:tag="moveRight" />
+
 </LinearLayout>
 
 <LinearLayout
@@ -121,14 +145,15 @@
         android:layout_height="fill_parent"
         android:layout_weight="1" >
     </FrameLayout>
-
+
     <Button
         android:id="@+id/down"
         android:layout_width="0dp"
-        android:layout_height="50dip"
+        android:layout_height="75dip"
         android:layout_weight="1"
         android:background="@drawable/down_button"
-        android:onClick="navDown" />
+        android:onClick="nav"
+        android:tag="moveDown" />
  
     <FrameLayout
         android:id="@+id/frameLayout4"
@@ -150,7 +175,8 @@
              android:id="@+id/back"
              android:layout_width="fill_parent"
              android:layout_height="wrap_content"
-             android:onClick="navBack"
+             android:onClick="nav"
+        	 android:tag="back"
              android:text="Back" /> 
 
          <Button

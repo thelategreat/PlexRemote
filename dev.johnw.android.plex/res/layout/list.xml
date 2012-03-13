@@ -3,32 +3,84 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center_horizontal"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/back"
+     >
 
     <TextView
         android:id="@+id/headerText"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
         android:text="@string/hello" />
-
+
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="fill_parent"
-        android:layout_height="403dp" >
-
+        android:layout_height="367dp" 
+		android:background="#AAD9C8AD">
         <LinearLayout
             android:id="@+id/linearList"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" 
             android:orientation="vertical" >
+
+
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="fill_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="20dip"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal" >
+        
+</LinearLayout><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal" >
+<Button
+        android:id="@+id/rew"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Back"
-        android:onClick="showNav" />
+        android:layout_weight="1"
+        android:onClick="play"
+        android:tag="stepBack"
+        android:text="Rew" />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Play"
+        android:onClick="play"
+        android:tag="play" />
+    
+        <Button
+        android:id="@+id/stop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="play"
+        android:tag="stop"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/ff"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="play"
+        android:tag="stepForward"
+        android:text="FF" />
+
+</LinearLayout>
+
+<Button
+    android:id="@+id/button1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:onClick="showNav"
+    android:text="Nav" />
 
 </LinearLayout>
